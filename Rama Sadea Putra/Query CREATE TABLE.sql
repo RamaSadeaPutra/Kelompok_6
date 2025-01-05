@@ -51,7 +51,7 @@ CREATE TABLE Pembayaran (
     tanggal_pembayaran DATETIME,
     harga DECIMAL(10,2),
     statuss VARCHAR(10) CHECK (statuss IN ('Sukses', 'Gagal')),
-    metode_pembayaran VARCHAR(50),
+    metode_pembayaran VARCHAR(10) CHECK (statuss IN ('Transfer', 'Cash')),
     FOREIGN KEY (id_tiket) REFERENCES Tiket(id_tiket)
 );
 
